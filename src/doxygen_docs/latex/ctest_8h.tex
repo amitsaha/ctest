@@ -1,0 +1,135 @@
+\hypertarget{ctest_8h}{\section{ctest.\-h File Reference}
+\label{ctest_8h}\index{ctest.\-h@{ctest.\-h}}
+}
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ctest_8h_a002b2f4894492820fe708b1b7e7c5e70}{E\-P\-S\-I\-L\-O\-N}~1e-\/5
+\item 
+\#define \hyperlink{ctest_8h_a195ca3987a60992c5abfc663cd37151d}{S\-T\-D\-O\-U\-T\-\_\-\-F\-I\-L\-E}~\char`\"{}/tmp/stdout.\-mock\char`\"{}
+\item 
+\#define \hyperlink{ctest_8h_a17a0567d0a5cd209adf8252a181a18f6}{test\-Almost\-Equals}(name, expected, actual)
+\item 
+\#define \hyperlink{ctest_8h_a8a103a0f76dece66460b20302a530191}{test\-Equals}(name, expected, actual)
+\item 
+\#define \hyperlink{ctest_8h_a319c680d130724626fdc8a344e8a94bd}{test\-Equal\-Strings}(name, expected, actual)
+\item 
+\#define \hyperlink{ctest_8h_a88e6719117adbf7b59674754e585e301}{test\-Stdout}(name, expected, length)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ctest_8h_ac9d4fe03a2a229f159dcc68d89f35278}{patchstdout} ()
+\item 
+void \hyperlink{ctest_8h_a238433c9c0991650df0a112dd3ac9937}{restorestdout} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{ctest_8h_a8ca3168aa3f9dfb18c2a4f87709bb828}{patched\-\_\-stdout}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ctest_8h_a002b2f4894492820fe708b1b7e7c5e70}{\index{ctest.\-h@{ctest.\-h}!E\-P\-S\-I\-L\-O\-N@{E\-P\-S\-I\-L\-O\-N}}
+\index{E\-P\-S\-I\-L\-O\-N@{E\-P\-S\-I\-L\-O\-N}!ctest.h@{ctest.\-h}}
+\subsubsection[{E\-P\-S\-I\-L\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-S\-I\-L\-O\-N~1e-\/5}}\label{ctest_8h_a002b2f4894492820fe708b1b7e7c5e70}
+\hypertarget{ctest_8h_a195ca3987a60992c5abfc663cd37151d}{\index{ctest.\-h@{ctest.\-h}!S\-T\-D\-O\-U\-T\-\_\-\-F\-I\-L\-E@{S\-T\-D\-O\-U\-T\-\_\-\-F\-I\-L\-E}}
+\index{S\-T\-D\-O\-U\-T\-\_\-\-F\-I\-L\-E@{S\-T\-D\-O\-U\-T\-\_\-\-F\-I\-L\-E}!ctest.h@{ctest.\-h}}
+\subsubsection[{S\-T\-D\-O\-U\-T\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-D\-O\-U\-T\-\_\-\-F\-I\-L\-E~\char`\"{}/tmp/stdout.\-mock\char`\"{}}}\label{ctest_8h_a195ca3987a60992c5abfc663cd37151d}
+\hypertarget{ctest_8h_a17a0567d0a5cd209adf8252a181a18f6}{\index{ctest.\-h@{ctest.\-h}!test\-Almost\-Equals@{test\-Almost\-Equals}}
+\index{test\-Almost\-Equals@{test\-Almost\-Equals}!ctest.h@{ctest.\-h}}
+\subsubsection[{test\-Almost\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}\#define test\-Almost\-Equals(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}}\label{ctest_8h_a17a0567d0a5cd209adf8252a181a18f6}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(fabs(expected - actual) > \hyperlink{ctest_8h_a002b2f4894492820fe708b1b7e7c5e70}{EPSILON})            \(\backslash\)
+    printf(\textcolor{stringliteral}{"FAIL: %s\(\backslash\)n"}, name);             \(\backslash\)
+  else                          \(\backslash\)
+    printf(\textcolor{stringliteral}{"PASS: %s\(\backslash\)n"}, name);             \(\backslash\)
+\end{DoxyCode}
+\hypertarget{ctest_8h_a8a103a0f76dece66460b20302a530191}{\index{ctest.\-h@{ctest.\-h}!test\-Equals@{test\-Equals}}
+\index{test\-Equals@{test\-Equals}!ctest.h@{ctest.\-h}}
+\subsubsection[{test\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}\#define test\-Equals(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}}\label{ctest_8h_a8a103a0f76dece66460b20302a530191}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(actual == expected)          \(\backslash\)
+    printf(\textcolor{stringliteral}{"PASS: %s\(\backslash\)n"}, name);         \(\backslash\)
+  else                      \(\backslash\)
+    printf(\textcolor{stringliteral}{"FAIL: %s\(\backslash\)n"}, name);         \(\backslash\)
+\end{DoxyCode}
+\hypertarget{ctest_8h_a319c680d130724626fdc8a344e8a94bd}{\index{ctest.\-h@{ctest.\-h}!test\-Equal\-Strings@{test\-Equal\-Strings}}
+\index{test\-Equal\-Strings@{test\-Equal\-Strings}!ctest.h@{ctest.\-h}}
+\subsubsection[{test\-Equal\-Strings}]{\setlength{\rightskip}{0pt plus 5cm}\#define test\-Equal\-Strings(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}}\label{ctest_8h_a319c680d130724626fdc8a344e8a94bd}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(strcmp(expected, actual) == 0)           \(\backslash\)
+    printf(\textcolor{stringliteral}{"PASS: %s\(\backslash\)n"}, name);             \(\backslash\)
+  else                          \(\backslash\)
+    printf(\textcolor{stringliteral}{"FAIL: %s\(\backslash\)n"}, name);             \(\backslash\)
+\end{DoxyCode}
+\hypertarget{ctest_8h_a88e6719117adbf7b59674754e585e301}{\index{ctest.\-h@{ctest.\-h}!test\-Stdout@{test\-Stdout}}
+\index{test\-Stdout@{test\-Stdout}!ctest.h@{ctest.\-h}}
+\subsubsection[{test\-Stdout}]{\setlength{\rightskip}{0pt plus 5cm}\#define test\-Stdout(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{expected, }
+\item[{}]{length}
+\end{DoxyParamCaption}
+)}}\label{ctest_8h_a88e6719117adbf7b59674754e585e301}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} *actual;                               \(\backslash\)
+  actual = malloc(length);\(\backslash\)
+  FILE *f = fopen(\hyperlink{ctest_8h_a195ca3987a60992c5abfc663cd37151d}{STDOUT\_FILE}, \textcolor{stringliteral}{"r"});                 \(\backslash\)
+  fgets(actual, length, f);                     \(\backslash\)
+  if(strcmp(expected, actual) == 0)                 \(\backslash\)
+    printf(\textcolor{stringliteral}{"PASS: %s\(\backslash\)n"}, name);                     \(\backslash\)
+  else                                  \(\backslash\)
+    printf(\textcolor{stringliteral}{"FAIL: %s\(\backslash\)n Length: %d Expected: %s Actual: %s"}, name, length, expected, actual); \(\backslash\)
+  fclose(f);                                \(\backslash\)
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{ctest_8h_ac9d4fe03a2a229f159dcc68d89f35278}{\index{ctest.\-h@{ctest.\-h}!patchstdout@{patchstdout}}
+\index{patchstdout@{patchstdout}!ctest.h@{ctest.\-h}}
+\subsubsection[{patchstdout}]{\setlength{\rightskip}{0pt plus 5cm}void patchstdout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ctest_8h_ac9d4fe03a2a229f159dcc68d89f35278}
+\hypertarget{ctest_8h_a238433c9c0991650df0a112dd3ac9937}{\index{ctest.\-h@{ctest.\-h}!restorestdout@{restorestdout}}
+\index{restorestdout@{restorestdout}!ctest.h@{ctest.\-h}}
+\subsubsection[{restorestdout}]{\setlength{\rightskip}{0pt plus 5cm}void restorestdout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ctest_8h_a238433c9c0991650df0a112dd3ac9937}
+
+
+\subsection{Variable Documentation}
+\hypertarget{ctest_8h_a8ca3168aa3f9dfb18c2a4f87709bb828}{\index{ctest.\-h@{ctest.\-h}!patched\-\_\-stdout@{patched\-\_\-stdout}}
+\index{patched\-\_\-stdout@{patched\-\_\-stdout}!ctest.h@{ctest.\-h}}
+\subsubsection[{patched\-\_\-stdout}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ patched\-\_\-stdout}}\label{ctest_8h_a8ca3168aa3f9dfb18c2a4f87709bb828}
