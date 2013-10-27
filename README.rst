@@ -32,8 +32,6 @@ Source tree::
     .
     ├── ctest.c
     ├── ctest.h
-    ├── doxygen.config
-    ├── doxygen_docs
     ├── examples
     ├── Makefile
     ├── print.c
