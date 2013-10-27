@@ -29,21 +29,18 @@ Source code
 
 Source tree::
 
-``
-.
-├── ctest.c
-├── ctest.h
-├── doxygen.config
-├── doxygen_docs
-├── examples
-├── Makefile
-├── print.c
-├── print.h
-├── sum.c
-├── sum.h
-└── tests
-
-``
+    .
+    ├── ctest.c
+    ├── ctest.h
+    ├── doxygen.config
+    ├── doxygen_docs
+    ├── examples
+    ├── Makefile
+    ├── print.c
+    ├── print.h
+    ├── sum.c
+    ├── sum.h
+    └── tests
 
 The functionality of the program is provided via ``ctest.h`` and 
 ``ctest.c`` files. In fact, ``ctest.c`` currently performs only one
